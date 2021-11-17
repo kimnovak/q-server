@@ -1,0 +1,67 @@
+GET http://localhost:3001/users
+
+###
+
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "username": "bbb",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "bbb",
+    "password": "password"
+}
+
+###
+GET http://localhost:3001/purchases
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZjM4MDEzOC1lMzRjLTQ0N2UtODdiNi0xZjIxY2FhODFmODEiLCJpYXQiOjE2MzcxMTMzNjEsImV4cCI6MTYzNzExNTE2MX0.QPW-Vr41Xmx5eWvAEKtqed-jYd6fcMcMnPdvfvhQsmc
+
+###
+
+POST http://localhost:3001/purchases
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZjM4MDEzOC1lMzRjLTQ0N2UtODdiNi0xZjIxY2FhODFmODEiLCJpYXQiOjE2MzcxMTMzNjEsImV4cCI6MTYzNzExNTE2MX0.QPW-Vr41Xmx5eWvAEKtqed-jYd6fcMcMnPdvfvhQsmc
+Content-Type: application/json
+
+{
+    "products": [{"id": "113", "price": 55, "amount": 2}]
+}
+
+###
+GET http://localhost:3001/purchases
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMTA3YzNhNTEtMmQ0OC00ZjYwLTk5NjUtMTFiZTQ1NmM3MDNlIiwiaWF0IjoxNjM3MTEyMzM0LCJleHAiOjE2MzcxMTQxMzR9.jTugo0U15o-0OntqgfR--jrvcK2yqVb9PYuEGC4MlWc
+
+###
+
+POST http://localhost:3001/purchases
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMTA3YzNhNTEtMmQ0OC00ZjYwLTk5NjUtMTFiZTQ1NmM3MDNlIiwiaWF0IjoxNjM3MTEyMzM0LCJleHAiOjE2MzcxMTQxMzR9.jTugo0U15o-0OntqgfR--jrvcK2yqVb9PYuEGC4MlWc
+Content-Type: application/json
+
+{
+    "products": [{"id": "3", "price": 55, "amount": 2}]
+}
+
+###
+
+POST http://localhost:4000/token 
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMzgwMTM4LWUzNGMtNDQ3ZS04N2I2LTFmMjFjYWE4MWY4MSIsInVzZXJuYW1lIjoiYmJiIiwicGFzc3dvcmQiOiIkMmIkMTAkWURRbmNLYUc0WXlsVnFxQWpUL1JDZU9kMEVxbWgwNUlhc0RjeDQ3eVRDMHRxdTVGWUNja2EiLCJyb2xlIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMjEtMTEtMTdUMDE6NDI6MzYuMzcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMTEtMTdUMDE6NDI6MzYuMzcyWiIsImlhdCI6MTYzNzExMzczMn0.1rl2o8WewPnRQUEPkZhznqqkWZYhpmmfga3T-BgXnR4"
+}
+
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMzgwMTM4LWUzNGMtNDQ3ZS04N2I2LTFmMjFjYWE4MWY4MSIsInVzZXJuYW1lIjoiYmJiIiwicGFzc3dvcmQiOiIkMmIkMTAkWURRbmNLYUc0WXlsVnFxQWpUL1JDZU9kMEVxbWgwNUlhc0RjeDQ3eVRDMHRxdTVGWUNja2EiLCJyb2xlIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMjEtMTEtMTdUMDE6NDI6MzYuMzcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMTEtMTdUMDE6NDI6MzYuMzcyWiIsImlhdCI6MTYzNzExMzczMn0.1rl2o8WewPnRQUEPkZhznqqkWZYhpmmfga3T-BgXnR4"
+}

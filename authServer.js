@@ -28,7 +28,7 @@ app.post('/token', (req, res) => {
         if (err) {
             return res.sendStatus(403);
         }
-        const accessToken = generateAccessToken({userId: user.id})
+        const accessToken = generateAccessToken({id: user.id})
         res.json({accessToken});
     });
 });

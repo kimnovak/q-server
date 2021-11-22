@@ -84,8 +84,10 @@ app.post('/purchases', authenticateToken, async (req, res) => {
             userId: req.userId,
             products: req.body.products,
         })
+        res.send(201);
     } catch(e) {
         console.log(e);
+        res.send(500);
     }
 })
 
@@ -93,7 +95,7 @@ app.get('/purchases', authenticateToken, async (req, res) => {
     try {
         const purchases = await Purchase.findAll({where: {userId: req.userId}});
 
-        res.json(purchases);
+        res.status(200).json(purchases);
     } catch (e) {
         console.log(e);
         res.sendStatus(500);
